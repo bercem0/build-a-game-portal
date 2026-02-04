@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boter, Kaas En Eieren</title>
+    <link rel="stylesheet" href="css/bke.css">
+</head>
+<body>
+    <!-- Navigatielinks naar verschillende pagina's van het spel -->
+    <header>
+        <nav class="navigation-index-page">
+            <a href="index.html" class="nav-titles">Home</a>
+            <a href="BoterKaasEnEieren.html" class="nav-titles">Boter Kaas en Eieren</a>
+            <a href="WhackAMole.html" class="nav-titles">Whack a Mole</a>
+            <a href="zeeslag.html" class="nav-titles">Zeeslag</a>
+        </nav>
+        <h1>Boter, Kaas En Eieren</h1>
+    </header>
+
+    <!-- Startscherm -->
+    <div id="start-screen">
+        <h2>Scrijf uw naam om het spel te starten!</h2>
+        <input type="text" id="speler1-name" placeholder="Naam van Speler 1">
+
+        <!--Deze button is de begin knop van het spel-->
+        <button id="start-game-button">Start het Spel</button>
+    </div>
+
+    <!-- Spel Scherm -->
+    <div id="game-container">
+        <!--Informatie van speler 1-->
+        <div id="speler1-info" class="player-info">
+            <h3>Speler 1 - X</h3>
+            <table>
+                <tr>
+                    <td>NAAM:</td>
+                    <td id="speler1-display-name"></td>
+                </tr>
+                <tr>
+                    <td>SCORE:</td>
+                    <td id="speler1-hits">0</td>
+                </tr>
+                <tr>
+                    <td>GEWONNEN:</td>
+                    <td id="speler1-wins">0</td>
+                </tr>
+                <tr>
+                    <td>VERLOREN:</td>
+                    <td id="speler1-losses">0</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Het speelbord waar spelers hun zetten maken -->
+        <div class="game-board">
+            <!-- Het 3x3 rooster van het Tic Tac Toe-bord -->
+            <h2>X of O</h2>
+            <div class="row">
+                <div class="cell" id="cell-0"></div>
+                <div class="cell" id="cell-1"></div>
+                <div class="cell" id="cell-2"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id="cell-3"></div>
+                <div class="cell" id="cell-4"></div>
+                <div class="cell" id="cell-5"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id="cell-6"></div>
+                <div class="cell" id="cell-7"></div>
+                <div class="cell" id="cell-8"></div>
+            </div>
+        </div>
+        
+        <!--Informatie van speler 2-->
+        <div id="speler2-info" class="player-info">
+            <h3>Speler 2 - O</h3>
+            <table>
+                <tr>
+                    <td>SCORE:</td>
+                    <td id="speler2-hits">0</td>
+                </tr>
+                <tr>
+                    <td>GEWONNEN:</td>
+                    <td id="speler2-wins">0</td>
+                </tr>
+                <tr>
+                    <td>VERLOREN:</td>
+                    <td id="speler2-losses">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Overlay en message panel voor het tonen van win/verlies -->
+    <div class="overlay" id="overlay"></div>
+    <div class="message-panel" id="message-panel">
+        <div id="message"></div>
+        <!-- Knop om opnieuw te beginnen -->
+        <button class="reset-button">Opnieuw Starten</button>
+    </div>
+    
+    <!--Hoe wordt het spel gespeeld? knop-->
+    <button class="rules-button">Hoe wordt het spel gespeeld?</button>
+    <div class="rules-panel" id="rules-panel">
+        <p>Welkom bij het Boter, Kaas En Eieren spel!</p>
+        <p>Spelregels:</p>
+        <ul> 
+            <li>Het speelbord:</li>
+            <p>bestaat uit een 3x3 rooster.</p>
+            <li>De rollen van de spelers:</li>
+            <p>twee spelers nemen het tegen elkaar op, waarbij de ene speler "X" is en de andere "O".</p>
+            <li>Het hoofddoel:</li>
+            <p>drie dezelfde symbolen op een rij krijgen - verticaal, horizontaal of diagonaal.</p>
+            <li>Het spelverloop:</li>
+            <p>spelers plaatsen hun symbolen op vrije vakjes. Meestal begint "X".</p>
+            <li>Speelvolgorde:</li>
+            <p>spelers doen om de beurt een zet; het overslaan van een beurt is niet toegestaan.</p>
+            <li>Hoe te winnen:</li>
+            <p>een speler wint door drie van zijn symbolen op een rij te krijgen.</p>
+            <li>Gelijkspel:</li>
+            <p>als alle vakjes bezet zijn en niemand heeft een rij van drie symbolen, wordt het spel beschouwd als een gelijkspel.</p>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2024 Boter, Kaas En Eieren Spel.</p>
+        <p>&copy; Bercem Yildirim</p>
+    </footer>
+    <script src="js/bke.js"></script>
+</body>
+</html>
